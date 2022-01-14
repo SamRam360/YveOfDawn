@@ -1373,6 +1373,7 @@ MonoBehaviour:
   verticalInput: 0
   horizonalInput: 0
   leftStickIn_Input: 0
+  jump_Input: 0
 --- !u!114 &4221284759198837236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1386,18 +1387,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inAirTimer: 0
-  leapingVelocity: 15
-  fallingVelocity: 25
-  rayCastHeightOffSet: 0.6
+  leapingVelocity: 3
+  fallingVelocity: 45
+  rayCastHeightOffSet: 0.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
   isSprinting: 0
   isGrounded: 1
+  isJumping: 0
   walkingSpeed: 1
   runningSpeed: 5
   sprintingSpeed: 7.5
   roationSpeed: 8
+  jumpHeight: 2
+  gravityIntensity: -10
 --- !u!114 &4221284759198837237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1453,6 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698425a4b66171c498c4ded4c811cd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1001 &7727254366827545142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1464,6 +1469,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f207e2f810eb2c34592fe6f13f5917e9, type: 2}
+    - target: {fileID: 5836330874371757374, guid: 36311f310f7995b48a487fdff25aec22, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5883956959865921452, guid: 36311f310f7995b48a487fdff25aec22, type: 3}
       propertyPath: m_Layer
       value: 6
